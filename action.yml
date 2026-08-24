@@ -1,8 +1,7 @@
 name: 'Jiminy Evaluate'
 description: >-
-  Evaluate DecisionTrace fixtures against the Jiminy accountability API on
-  every PR/commit and fail the build on a bad verdict. See README.md and
-  scripts/ci_evaluate.py.
+  Evaluate DecisionTrace fixtures against the Jiminy accountability API in
+  CI and fail the build on a bad verdict.
 author: 'Jiminy'
 branding:
   icon: 'shield'
