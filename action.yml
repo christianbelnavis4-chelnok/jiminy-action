@@ -27,7 +27,7 @@ inputs:
     default: 'rejected'
   calibrate:
     description: >-
-      Use calibration mode (?mode=calibrate) — results aren't persisted and
+      Use calibration mode (?mode=calibrate): results aren't persisted and
       don't count against quota. Recommended for a first CI integration
       before committing to a --fail-on policy on real submissions.
     required: false
@@ -36,7 +36,7 @@ inputs:
     description: >-
       Opt-in fixture regression check: also replay every active
       fixture for each agent_owner referenced by traces-glob, and report
-      any that no longer reproduce their frozen violation. Advisory only —
+      any that no longer reproduce their frozen violation. Advisory only:
       never affects this action's exit code, only fail-on does. Reported
       as a ::warning:: and a second table alongside the main results.
     required: false
@@ -46,11 +46,11 @@ inputs:
       Post (and keep updated on every push) a PR comment with the
       per-trace verdict table, in addition to the job's own
       $GITHUB_STEP_SUMMARY. No-op on a non-pull_request event (e.g. a push
-      to main). Requires github-token to have pull-requests: write — the
+      to main). Requires github-token to have pull-requests: write. The
       default GITHUB_TOKEN has this on same-repo PRs if your workflow sets
       `permissions: pull-requests: write`, but is always read-only on PRs
       from forks regardless of that setting. A comment that fails to post
-      is a warning, not a build failure — the evaluation itself still gates
+      is a warning, not a build failure: the evaluation itself still gates
       the build via this action's exit code either way.
     required: false
     default: 'true'
